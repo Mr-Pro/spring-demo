@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd ">
+
+    <!--声明一个bean并且指定相应的类-->
+    <bean name="dog" class="cn.lger.domain.Dog">
+        <property name="name" value="小美"/>
+        <property name="breed" value="土狗"/>
+        <property name="sex" value="母"/>
+    </bean>
+
+    <bean name="dog2" class="cn.lger.domain.Dog">
+        <property name="name" value="小美2"/>
+        <property name="breed" value="土狗"/>
+        <property name="sex" value="母"/>
+    </bean>
+
+    <!--<bean name="proxy" class="cn.lger.proxy.Proxy"/>-->
+
+    <bean name="man" class="cn.lger.domain.Man">
+        <!--通过ref映射将dog属性注入-->
+        <property name="dog" ref="dog"/>
+        <!--通过构造函数注入-->
+        <constructor-arg ref="dog2"/>
+    </bean>
+
+
+    <!--
+        关于aop:pointcut的规则
+        <aop:pointcut id="walkTheDog" expression="execution(* cn.lger.domain.Man.noFreeTime())"/>
+        id->pointcut标识，具有唯一性
+        expression是填入一个表达式，首先我们要了解
+    -->
+    <!--<aop:config>-->
+        <!--<aop:pointcut id="walkTheDog" expression="execution(* cn.lger.domain.Man.noFreeTime())"/>-->
+
+        <!--<aop:aspect id="proxy" ref="proxy">-->
+            <!--<aop:before method="before" pointcut-ref="walkTheDog"/>-->
+            <!--<aop:after method="after" pointcut-ref="walkTheDog"/>-->
+        <!--</aop:aspect>-->
+        <!---->
+    <!--</aop:config>-->
+
+    <!--扫描cn.lger.domain包下的组件->Bean -->
+    <context:component-scan base-package="cn.lger.domain"/>
+    <!--开启注解配置-->
+    <context:annotation-config />
+
+</beans>
