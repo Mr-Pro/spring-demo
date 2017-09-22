@@ -11,6 +11,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class TestProxy {
 
+    /**
+     * 测试AOP是否配置成功
+     */
     @Test
     public void test01(){
         ClassPathXmlApplicationContext context =
@@ -18,4 +21,6 @@ public class TestProxy {
         Man man = context.getBean(Man.class);
         man.noFreeTime();
     }
+
+
 }

@@ -2,7 +2,6 @@ package cn.lger.test;
 
 import cn.lger.domain.Dog;
 import org.junit.Test;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -34,7 +33,7 @@ public class TestDI {
         ClassPathXmlApplicationContext applicationContext =
                 new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
         //通过bean的类型加载一个Dog类型对象
-        Dog dog = applicationContext.getBean(Dog.class);
+        Dog dog = (Dog) applicationContext.getBean("dog2");
         //打印测试
         System.out.println(dog);
     }

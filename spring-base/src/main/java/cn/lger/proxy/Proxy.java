@@ -8,7 +8,7 @@ package cn.lger.proxy;
 public class Proxy {
 
     public void before(){
-        System.out.println("代理人去家里牵狗");
+        System.out.println("代理人去被代理人家里牵狗，然后遛狗");
     }
 
     public void after(){

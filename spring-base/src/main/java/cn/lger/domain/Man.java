@@ -22,7 +22,7 @@ public class Man {
     }
 
     public void noFreeTime(){
-        System.out.println("狗主人上班了");
+        System.out.println("狗主人（被代理人）上班了");
     }
 
     public Dog getDog() {
