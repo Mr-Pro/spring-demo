@@ -9,11 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-base</artifactId>
-    <dependencies>
-        
+    <artifactId>spring-tx</artifactId>
 
-    </dependencies>
 
 
 </project>
