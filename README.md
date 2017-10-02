@@ -8,6 +8,13 @@
   
 * spring-tx
   - 主要通过xml配置Jdbc事务
+  - 通过DruidDataSource连接数据库
+  - 使用JdbcTemplate操作
+  
+* spring-annotation
+  - 使用注解装配Bean
+  - 使用注解完成AOP操作
+  - 使用注解完成事务操作
 
 
 

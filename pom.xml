@@ -11,6 +11,7 @@
     <modules>
         <module>spring-base</module>
         <module>spring-tx</module>
+        <module>spring-annotation</module>
     </modules>
 
     <properties>

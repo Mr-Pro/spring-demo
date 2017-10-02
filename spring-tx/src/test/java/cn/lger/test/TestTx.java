@@ -2,7 +2,6 @@ package cn.lger.test;
 
 import cn.lger.service.TransferService;
 import org.junit.Test;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -17,7 +16,7 @@ public class TestTx {
      */
     @Test
     public void test01(){
-        ApplicationContext context =
+        ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
         TransferService service = context.getBean(TransferService.class);
         service.transferMoney();
