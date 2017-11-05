@@ -14,7 +14,7 @@ import javax.annotation.Resource;
  * Created by Pro on 2017-11-05.
  */
 @Controller
-@RequestMapping("/register")
+@RequestMapping(value = "/register")
 public class RegisterController {
 
     @Resource

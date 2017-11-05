@@ -10,14 +10,13 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
-
+    <!--配置视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--视图的后缀，配置后方便我们返回视图操作少写.jsp-->
         <property name="suffix" value=".jsp"/>
     </bean>
 
-
     <mvc:annotation-driven />
     <context:component-scan base-package="cn.lger.controller"/>
-
 
 </beans>
