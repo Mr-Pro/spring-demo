@@ -18,7 +18,6 @@ public class UserService {
     @Resource
     private UserDao userDao;
 
-
     public String queryPasswordByUsername(final String username){
         return userDao.queryPasswordByUsername(username);
     }
@@ -28,8 +27,7 @@ public class UserService {
      * @param user user
      * @return 是否注册成功
      */
-
-    @Transactional
+    @Transactional //事务操作
     public boolean regUser(User user){
         if (userDao.addUser(user) != 0){
             userDao.addMoney(10, user.getUsername());

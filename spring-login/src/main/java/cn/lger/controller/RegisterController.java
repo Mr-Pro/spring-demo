@@ -1,6 +1,5 @@
 package cn.lger.controller;
 
-import cn.lger.dao.UserDao;
 import cn.lger.domain.User;
 import cn.lger.service.UserService;
 import org.springframework.stereotype.Controller;
@@ -21,11 +20,20 @@ public class RegisterController {
     @Resource
     private UserService userService;
 
+    /**
+     * 返回注册页面
+     * @return register.jsp
+     */
     @RequestMapping(method = RequestMethod.GET)
     public String regView(){
         return "register";
     }
 
+    /**
+     * 根据是否登录成功返回相应的页面
+     * @param user user
+     * @return 视图
+     */
     @RequestMapping(method = RequestMethod.POST)
     public String reg(User user){
         if (userService.regUser(user))
