@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-annotation/spring-annotation.iml" filepath="$PROJECT_DIR$/spring-annotation/spring-annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-base/spring-base.iml" filepath="$PROJECT_DIR$/spring-base/spring-base.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-demo.iml" filepath="$PROJECT_DIR$/spring-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-login/spring-login.iml" filepath="$PROJECT_DIR$/spring-login/spring-login.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-tx/spring-tx.iml" filepath="$PROJECT_DIR$/spring-tx/spring-tx.iml" />
     </modules>
   </component>

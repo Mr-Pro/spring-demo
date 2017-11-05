@@ -12,6 +12,7 @@
         <module>spring-base</module>
         <module>spring-tx</module>
         <module>spring-annotation</module>
+        <module>spring-login</module>
     </modules>
 
     <properties>

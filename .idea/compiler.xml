@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-annotation" />
         <module name="spring-base" />
+        <module name="spring-login" />
         <module name="spring-tx" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
       <module name="spring-annotation" target="1.5" />
       <module name="spring-base" target="1.5" />
       <module name="spring-demo" target="1.5" />
+      <module name="spring-login" target="1.5" />
       <module name="spring-tx" target="1.5" />
     </bytecodeTargetLevel>
   </component>
